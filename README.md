@@ -31,6 +31,7 @@ Boiling:
 
 Material
 * Properties: 
+    * Name                    (name)
     * Thermal Conductivity    (k:W/mK)
     * Specific Heat Capacity  (c_p:J/kgK)
     * density                 (rho:kg/m^3)
@@ -45,17 +46,25 @@ Node
     * Position                (P:2x1 vect :m)
     * Material                (obj)
 * Functions:
-    * update(T_new,graph)
-        Update node temperature and energy based on material properties
-        Implementation of boiling process as above
+    * () = update(T_new,graph)
+        * Update node temperature and energy based on material properties
+        * Implementation of boiling process as above
 
 Edge
 * Properties: 
     * Nodes                   (nodes:2x1 vect Node)
-    * Thermal Resistivity     (R_tot:K/W)
 
 Graph
 * Properties: 
     * Nodes                   (nodes:collection of all nodes)
     * Edges                   (edges:connections between all nodes)
 
+Environment
+* Properties:
+    * Graph                   (graph: connected nodes)
+    * Graph History           (graph_hist: 1xT vect)
+* Functions:
+    * (graph_new) = step(t_h)
+        * perform time step march with time step t_h
+        * create new graph with new nodes
+        * update environment graph with new graph
