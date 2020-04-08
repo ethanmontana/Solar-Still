@@ -30,24 +30,28 @@ Boiling:
 #### Objects
 
 Material
-     Props: Thermal Conductivity    (k:W/mK)
-            Specific Heat Capacity  (c_p:J/kgK)
-            density                 (rho:kg/m^3)
-            thermal diffusivity     (alpha:m^2/s)
-            Vaporization Temp       (T_vap:C)
-            Enthalpy of Vapor.      (E_vap:J)
+* Props: 
+    * Thermal Conductivity    (k:W/mK)
+    * Specific Heat Capacity  (c_p:J/kgK)
+    * density                 (rho:kg/m^3)
+    * thermal diffusivity     (alpha:m^2/s)
+    * Vaporization Temp       (T_vap:C)
+    * Enthalpy of Vapor.      (E_vap:J)
 
 Node
-     Props: Temperature             (T:C)
-            Stored Energy           (E:J)
-            Position                (P:2x1 vect :m)
-            Material                (obj)
+* Props: 
+    * Temperature             (T:C)
+    * Stored Energy           (E:J)
+    * Position                (P:2x1 vect :m)
+    * Material                (obj)
 
 Edge
-     Props: Nodes                   (nodes:2x1 vect Node)
-            Thermal Resistivity     (R_tot:K/W)
+* Props: 
+    * Nodes                   (nodes:2x1 vect Node)
+    * Thermal Resistivity     (R_tot:K/W)
 
 Graph
-     Props: Nodes                   (nodes:collection of all nodes)
-            Edges                   (edges:connections between all nodes)
+* Props: 
+    * Nodes                   (nodes:collection of all nodes)
+    * Edges                   (edges:connections between all nodes)
 
