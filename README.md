@@ -21,11 +21,11 @@ Written in Matlab
 
 ### Implementation
 
-Boiling:    
+Boiling:
 * Keep track of stored energy and temperature of node
-            * Once node reaches vaporization temperature, increase in energy results in increase in stored energy but not temperature
-            * When stored energy reaches energy of vaporization temp + enthalpy of vaporization, considered "boiled"
-            * Once boiled, replace energy with lowest level of energy of neighbors
+* Once node reaches vaporization temperature, increase in energy results in increase in stored energy but not temperature
+* When stored energy reaches energy of vaporization temp + enthalpy of vaporization, considered "boiled"
+* Once boiled, replace energy with lowest level of energy of neighbors
 
 #### Objects
 
