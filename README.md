@@ -15,7 +15,7 @@ Adapted From: _Fundamentals of Heat and Mass Transfer_. Incropera, Dewitt, Bergm
 
 ### Structure
 
-Using object oriented programming and scripting
+Combination of object oriented programming and scripting
 
 Written in Matlab
 
@@ -30,7 +30,7 @@ Boiling:
 #### Objects
 
 Material
-* Props: 
+* Properties: 
     * Thermal Conductivity    (k:W/mK)
     * Specific Heat Capacity  (c_p:J/kgK)
     * density                 (rho:kg/m^3)
@@ -39,19 +39,23 @@ Material
     * Enthalpy of Vapor.      (E_vap:J)
 
 Node
-* Props: 
+* Properties: 
     * Temperature             (T:C)
     * Stored Energy           (E:J)
     * Position                (P:2x1 vect :m)
     * Material                (obj)
+* Functions:
+    * update(T_new,graph)
+        Update node temperature and energy based on material properties
+        Implementation of boiling process as above
 
 Edge
-* Props: 
+* Properties: 
     * Nodes                   (nodes:2x1 vect Node)
     * Thermal Resistivity     (R_tot:K/W)
 
 Graph
-* Props: 
+* Properties: 
     * Nodes                   (nodes:collection of all nodes)
     * Edges                   (edges:connections between all nodes)
 
